@@ -1,0 +1,181 @@
+/* Reset & global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #1f2933, #0b0f14);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* Container & Card */
+.container {
+    width: 100%;
+    max-width: 900px;
+    max-height: 1200px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #b0b8c1;
+    margin-bottom: 35px;
+    font-size: 1rem;
+}
+
+/* Form labels and inputs */
+label {
+    display: block;
+    margin: 18px 0 6px;
+    font-size: 0.95rem;
+    color: #d1d5db;
+}
+
+input, select {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: none;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    outline: none;
+    font-size: 0.95rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+input:focus, select:focus {
+    background: rgba(255,255,255,0.15);
+    transform: scale(1.02);
+}
+
+select option {
+    background: #1f2933;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Scrollbar for select */
+select::-webkit-scrollbar {
+    width: 8px;
+}
+select::-webkit-scrollbar-thumb {
+    background-color: #3b82f6;
+    border-radius: 4px;
+}
+
+input::placeholder {
+    color: #9ca3af;
+}
+
+/* Grid layout for form inputs */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Submit button */
+button {
+    width: 100%;
+    margin-top: 30px;
+    padding: 16px;
+    border-radius: 14px;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(135deg, #147b43, #426683);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* Container for the result */
+#result {
+    width: 100%;
+    margin-top: 25px;
+    font-family: "Inter", sans-serif;
+}
+
+/* Title */
+#result .title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #f3f6f8;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+/* Team names and probabilities */
+#result .teams {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+/* Progress bar container */
+#result .progress-bar {
+    background-color: #2e3a46;
+    border-radius: 12px;
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+    display: flex;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.4);
+}
+
+/* Batting team bar */
+#result .batting-bar {
+    background: linear-gradient(90deg, #cccfdc, #cecdde);
+    height: 100%;
+    transition: width 1s ease-in-out;
+}
+
+/* Bowling team bar */
+#result .bowling-bar {
+    background: linear-gradient(90deg, #6ba4d2, #1675c3);
+    height: 100%;
+    transition: width 1s ease-in-out;
+}

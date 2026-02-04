@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IPL Win Probability Predictor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <h1>IPL Win Probability Predictor</h1>
+        <p class="subtitle">Machine Learning based real-time match outcome prediction</p>
+
+        <form id="predictForm">
+            <div class="grid-2">
+                <div>
+                    <label>Batting Team</label>
+                    <select id="battingTeam" required>
+                        <option value="">Select team</option>
+                        <option>Chennai Super Kings</option>
+                        <option>Delhi Capitals</option>
+                        <option>Gujarat Titans</option>
+                        <option>Kolkata Knight Riders</option>
+                        <option>Lucknow Super Giants</option>
+                        <option>Mumbai Indians</option>
+                        <option>Punjab Kings</option>
+                        <option>Rajasthan Royals</option>
+                        <option>Royal Challengers Bengaluru</option>
+                        <option>Sunrisers Hyderabad</option>
+
+                    </select>
+                </div>
+
+                <div>
+                    <label>Bowling Team</label>
+                    <select id="bowlingTeam" required>
+                        <option value="">Select team</option>
+                        <option>Chennai Super Kings</option>
+                        <option>Delhi Capitals</option>
+                        <option>Gujarat Titans</option>
+                        <option>Kolkata Knight Riders</option>
+                        <option>Lucknow Super Giants</option>
+                        <option>Mumbai Indians</option>
+                        <option>Punjab Kings</option>
+                        <option>Rajasthan Royals</option>
+                        <option>Royal Challengers Bengaluru</option>
+                        <option>Sunrisers Hyderabad</option>
+
+                    </select>
+                </div>
+            </div>
+
+            <label>Host City</label>
+            <select id="city" required>
+                <option value="">Select city</option>
+                <option>Abu Dhabi</option>
+                <option>Ahmedabad</option>
+                <option>Bangalore</option>
+                <option>Bengaluru</option>
+                <option>Cape Town</option>
+                <option>Centurion</option>
+                <option>Chandigarh</option>
+                <option>Chennai</option>
+                <option>Cuttack</option>
+                <option>Delhi</option>
+                <option>Dharamsala</option>
+                <option>Dubai</option>
+                <option>Durban</option>
+                <option>Guwahati</option>
+                <option>Hyderabad</option>
+                <option>Indore</option>
+                <option>Jaipur</option>
+                <option>Johannesburg</option>
+                <option>Kimberley</option>
+                <option>Lucknow</option>
+                <option>Nagpur</option>
+                <option>Navi Mumbai</option>
+                <option>Mohali</option>
+                <option>Port Elizabeth</option>
+                <option>Pune</option>
+                <option>Raipur</option>
+                <option>Ranchi</option>
+                <option>Sharjah</option>
+                <option>Visakhapatnam</option>
+                <option>Kolkata</option>
+
+            </select>
+
+            <label>Target Score</label>
+            <input type="number" id="total_run_x" placeholder="e.g. 180" required>
+
+            <div class="grid-3">
+                <div>
+                    <label>Current Score</label>
+                    <input type="number" id="current_score" placeholder="e.g. 95" required>
+                </div>
+
+                <div>
+                    <label>Overs Completed</label>
+                    <input type="number" id="overs_completed" step="0.1" placeholder="e.g. 12.3" required>
+                </div>
+
+                <div>
+                    <label>Wickets Fallen</label>
+                    <input type="number" id="wicket_fallen" min="0" max="10" placeholder="e.g. 4" required>
+                </div>
+            </div>
+
+            <button type="submit">Predict Win Probability</button>
+        </form>
+
+        <div id="result">
+            
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
